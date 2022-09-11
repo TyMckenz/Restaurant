@@ -47,7 +47,10 @@ namespace Restaurant.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Reservation reservation)
         {
-            _context.Reservation.Update(reservation);
+            if (id == reservation.ReserveId)
+            {
+                _context.Reservation.Update(reservation);
+            }
             _context.SaveChanges();
 
             _logger.Log(LogLevel.Information, "Checking to see what is happening");
@@ -55,9 +58,12 @@ namespace Restaurant.Controllers
 
         // DELETE api/<ReservationsController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(int id, Reservation reservation)
         {
-            _context.Remove(id);
+            if (id == reservation.ReserveId)
+            {
+                _context.Remove(id);
+            }
             _context.SaveChanges();
 
             _logger.Log(LogLevel.Information, "Checking to see what is happening");

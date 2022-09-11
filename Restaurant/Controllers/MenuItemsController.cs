@@ -47,15 +47,21 @@ namespace Restaurant.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] MenuItem item)
         {
-            _context.Menu.Update(item);
+            if (id == item.MenuId)
+            {
+                _context.Menu.Update(item);
+            }
             _context.SaveChanges();
         }
 
         // DELETE api/<MenuItemsController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(int id, MenuItem menuItem)
         {
-            _context.Remove(id);
+            if (id == menuItem.MenuId)
+            {
+                _context.Remove(menuItem);
+            }
             _context.SaveChanges();
         }
     }
