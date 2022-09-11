@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NuGet.Protocol.Core.Types;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 using Restaurant.Models;
+
+//SET IDENTITY_INSERT Reservation ON in the database to add things to it.
+
 namespace Restaurant.Controllers
 {
     [Route("api/[controller]")]

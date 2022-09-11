@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Restaurant.Models;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+// SET IDENTITY_INSERT MenuItems ON in the database to add things to it.
 
 namespace Restaurant.Controllers
 {
