@@ -18,7 +18,16 @@ namespace Restaurant.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Reservation>().HasMany(r => r.menuItems);
+            modelBuilder.Entity<Reservation>(entity =>
+            {
+                entity.Property(r => r.ReserveId).ValueGeneratedOnAdd();
+            });
+            modelBuilder.Entity<MenuItem>(entity =>
+            {
+                entity.Property(m => m.MenuId).ValueGeneratedOnAdd();
+            });
         }
     }
 }
+
 
