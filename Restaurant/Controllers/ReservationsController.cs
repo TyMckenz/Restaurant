@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 using NuGet.Protocol.Core.Types;
 using Restaurant.Models;
 
-//SET IDENTITY_INSERT Reservation ON in the database to add things to it.
+//SET IDENTITY_INSERT Reservation ON in the database to add things to it, or add to the DB first.
 
 namespace Restaurant.Controllers
 {
