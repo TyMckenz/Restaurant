@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Restaurant.Models;
 
-// SET IDENTITY_INSERT MenuItems ON in the database to add things to it, or add to the DB first.
+// SET IDENTITY_INSERT Menu ON in the database to add things to it, or add to the DB first.
 
 namespace Restaurant.Controllers
 {
